@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TooltipDemo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
@@ -26,3 +27,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# tooltip-demo
+An Agular 4 SPA with custom Tool Tip Component 
+>>>>>>> 4894dd313b0de0df1bc93df24f8ad78366c41e01
