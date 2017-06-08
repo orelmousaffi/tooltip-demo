@@ -1,5 +1,10 @@
 # TooltipDemo
 
+The TooltipDemo project demonstrates the development of a reusable Angular Component which utilizes a number of core featurs.
+The project utilizes a `ToolTipComponent` component which encasulates a formatted div with text, as well as a standared button attached to a directive for additional behaviour.
+
+The button utilizes the `tooltip-btn` attribute directive controlling what tooltips are shown and hidden between each button click. Only one tooltip may be displayed at a time and pressing the same button twice will result in toggling the current tooltip. The text box also features a directive; `tooltip-popup`. This directive actively listens for scroll event changes to control the postion of the tooltip relative to the button pressed.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
 
 ## Development server
