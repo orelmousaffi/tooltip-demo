@@ -1,13 +1,28 @@
+/*
+ * Author: Or-el Mousaffi
+*/
+
+//Import all requrired Core elements
 import { Component, Input, HostListener, ElementRef } from '@angular/core';
 
+//Import services
 import { ToolTipService } from './tooltip.service';
 
+/*
+ * Define the properties of the component
+ * selector: Specifies the HTML tag used for functionality
+ * stylesUrls: Import the css files applied to the elements in this compnent
+ * template: Defines the mark up rendered to create the component
+*/
 @Component({
 	selector: 'tooltip',
 	styleUrls: ['./tooltip.component.css'],
 	template: `
 		<div class="tooltip-container">
-			<div class="tooltip-content" *ngIf="active">
+			<div 
+				tooltip-popup 
+				class="tooltip-content top" 
+				*ngIf="active">
 				{{ tooltipText }}
 			</div>
 
@@ -17,17 +32,17 @@ import { ToolTipService } from './tooltip.service';
 })
 
 export class ToolTipComponent {
+
+	//Pass in date from the template to defined variables
 	@Input() btnTitle: string;
 	@Input() tooltipText: string;
-	@Input() active = false;
-
+	@Input() active: boolean = false;
+	
+	//Define the contructor
 	constructor(private toolTipService: ToolTipService, private toolTipTag: ElementRef) {
 
+		//For every tooltip created, add to the list managed by the service 
 		toolTipService.addToolTip(this);
-	}
-
-	getToolTipComponent() {
-		return this;
 	}
 
 	//Ensure that that if the 'ESC' button is pressed, all is closed

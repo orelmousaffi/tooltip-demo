@@ -2,3 +2,8 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~bootstrap/dist/css/bootstrap-theme.min.css";
 @import "~font-awesome/css/font-awesome.css";
+
+/* Height is just for testing */
+html {
+	height: 4000px;
+}

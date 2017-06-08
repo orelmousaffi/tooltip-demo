@@ -1,24 +1,33 @@
+//Import all Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
+//Import all Components
 import { AppComponent } from './app.component';
-import { ToolTipComponent } from './tooltip.component';
+import { ToolTipComponent } from '../tooltip/tooltip.component';
 
-import { ToolTipService } from './tooltip.service';
+//Import all Services
+import { ToolTipService } from '../tooltip/tooltip.service';
 
-import { ToolTipDirective } from './tooltip-btn.directive';
- 
+//Import all Directives
+import { ToolTipDirective } from '../tooltip/tooltip-btn.directive';
+import { ToolTipContentDirective } from '../tooltip/tooltip-content.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
     ToolTipComponent,
-    ToolTipDirective
+    ToolTipDirective,
+    ToolTipContentDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule
   ],
   exports: [
-  	ToolTipDirective
+  	ToolTipDirective,
+    ToolTipContentDirective
   ],
   providers: [
   	ToolTipService
