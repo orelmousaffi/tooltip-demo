@@ -17,9 +17,10 @@
 	position: absolute;
 	font-size: 10px;
 	overflow: hidden;
+	z-index: 5;
 }
 .top {
-	top: -55%;
+	bottom: -5px;
 }
 .bottom {
 	top: 100%;
